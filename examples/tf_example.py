@@ -9,7 +9,12 @@ Inspired from https://github.com/devsisters/DQN-tensorflow
 
 import random
 import argparse
-import os
+import os, sys
+#Needed to get paths set up for import tbrn
+curfilePath = os.path.abspath(__file__)
+curDir = os.path.abspath(os.path.join(curfilePath,os.pardir))
+parentDir = os.path.abspath(os.path.join(curDir,os.pardir))
+sys.path.insert(0,parentDir)
 from tqdm import tqdm
 from tbrn.agents.tf.tf_agent import Agent
 from tbrn.trading_game import TradingGame
@@ -183,6 +188,7 @@ def main(args):
             runner.run()
 
 if __name__ == '__main__':
+    
     parser = argparse.ArgumentParser(description='This starts the deepq')
     parser.add_argument('-l', '--load', help='Load from last run',\
                         required=False, dest='load', action='store_true')
