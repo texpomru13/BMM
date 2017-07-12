@@ -5,6 +5,12 @@ Training time is short and results are unstable.
 Do not hesitate to run several times and/or tweak parameters to get better results.
 Inspired from https://github.com/keon/deep-q-learning
 """
+#Needed to get paths set up for import tbrn
+import os,sys
+curfilePath = os.path.abspath(__file__)
+curDir = os.path.abspath(os.path.join(curfilePath,os.pardir))
+parentDir = os.path.abspath(os.path.join(curDir,os.pardir))
+sys.path.insert(0,parentDir)
 from tbrn.agents.keras.keras_agent import KerasAgent
 
 if __name__=="__main__":
