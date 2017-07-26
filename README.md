@@ -6,10 +6,6 @@ It is composed of mainly three components communicating through APIs:
 
 This library can be used to test agents with the Trading-Gym.
 
-## Architecture
-
-![](https://docs.google.com/drawings/d/1bL6Gl1hJh0PqsvHh0T5dcqcVrrxP7taN7UUL7a07zEk/pub?w=700)
-
 ## Installation
 
 Install packages in requirements.txt file
